@@ -1,0 +1,66 @@
+<style>
+    h1 {
+      text-align: center;
+    }
+    p {  margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+    font-family: fantasy;
+    border: rgb(240, 227, 227) 2px solid;}
+  
+    </style>
+<ion-header>
+
+    <ion-toolbar>
+        <ion-title  ><h1 style="color: #ff0101;">\\\\\\\\\\\\\\\\\\\</h1></ion-title>
+      </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content>
+    <br>
+    <ion-item>
+        <ion-label>
+<h1 style="color: #ff0101;"><p>Inicio de sesion</p></h1>
+        </ion-label>
+      </ion-item>
+    <br>
+    <br>
+    <br>
+   <br>
+   <form  [formGroup]="formularioLogin">
+    <ion-item>
+         <ion-label>Usuario: </ion-label>
+        <ion-input  formControlName="nombre" placeholder="" type="text"></ion-input>
+     </ion-item>
+<br>
+
+
+     <ion-item>
+        <ion-label>Contraseña: </ion-label>
+        <ion-input  formControlName="password"  placeholder="" type="password"></ion-input>
+      </ion-item>
+    </form>
+<br>
+<div style="margin: 0 auto; width:100px">
+  <ion-button (click)="onSubmit()" fill="outline"  color="danger" expand="center" size="small">Iniciar <br> sesión<ion-icon name="caret-forward-circle-outline"></ion-icon></ion-button>
+</div>
+<br>
+<br>
+<br>
+
+<ion-footer>
+    <ion-toolbar color="light">
+      
+        <ion-button expand="full" fill="outline"  color="danger" [routerLink]="['/registro']">Registrarse</ion-button>
+
+
+
+
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+
+

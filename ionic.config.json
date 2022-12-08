@@ -1,0 +1,7 @@
+{
+  "name": "proyect_sem_v2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

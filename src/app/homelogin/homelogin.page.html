@@ -1,0 +1,64 @@
+<ion-content>
+
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+
+      <ion-buttons class="button-4 " [routerLink]="['/calendario']">
+        Calendario
+      </ion-buttons>
+      
+      
+      </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Portal docente</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div >
+        <br>
+        <br>
+        <br>
+        <img src="assets/foto.png">
+      </div>
+     <br>
+     <br>
+     <br>
+ 
+     <br>
+     <br>
+      <div >
+        <button click="onClick()"  style="margin-left: 20px"  class="button-4"  role="button" ><ion-router-link   color="Dark">Cerrrar sesion</ion-router-link></button>
+      </div>
+      <div class="places">
+        <div  *ngFor="let calendary of calendarys">
+            <div >
+                <h4>{{calendary.asignatura}}</h4>
+                <p>{{calendary.descripcion}}</p>
+                <p>{{calendary.fecha}}</p>
+                <p>{{calendary.sala}}</p>
+  
+                <button class="btn btn-outline-danger" (click)="onClickDelete(calendary)">Borrar</button>
+            </div>
+        </div>
+    </div>
+    </ion-content>
+    
+  </div>
+
+
+
+</ion-content>
+
+

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>calendario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>           
+           <h6 ><p>Agregar asignatura</p></h6>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formulario"  >
+        <ion-item>
+          <ion-label position="floating">asignatura: </ion-label>
+          <ion-input formControlName="asignatura" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">descripcion:</ion-label>
+          <ion-input formControlName="descripcion" type="text" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">fecha:</ion-label>
+          <ion-input formControlName="fecha" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">sala:</ion-label>
+          <ion-input formControlName="sala" type="text"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="onSubmit()" expand="full" fill="outline"  color="danger"  href="/homelogin"><ion-router-link color="danger" >Guardar</ion-router-link>
+        </ion-button>
+      </form>
+      <br>
+      <br>
+      <ion-button size="small" expand="full" fill="outline"  color="danger"  ><ion-router-link color="danger"  href="/homelogin">Volver</ion-router-link></ion-button >
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
